@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON Renderer</title>
+<link rel="StyleSheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="scripts/json-min.js"></script>
+<script type="text/javascript" src="scripts/BubbleTooltips.js"></script>
+<script type="text/javascript" src="scripts/parse.js"></script>
+<!--[if lt IE 7]>
+<script defer type="text/javascript" src="scripts/pngfix.js"></script>
+<![endif]-->
+</head>
+<body id="body" onmouseover="stopFocus();">
+   <a name="_top" class="noa"></a>
+
+   <div class="header">
+   <h1 style="text-align:center;color:white;">JSON Visualizer</h1>
+   </div>
+
+   <div class="mainbody">
+      <form onsubmit="doParse(); return false;">
+         <p class="mast mast_first">JSON Helper for developers to get the data as required.<br />
+         Load possible legal JSON values into the text area below.</p>
+         </p>
+         <div id="inputcontainer">
+            <textarea id="text" rows="18">
+            </textarea>
+         </div>
+         <div class="clear">
+         </div>
+         <div class="lfloat">
+            <input type="submit" id="submit" value="Render" onclick="doParse(); return false;" /> 
+            <input type="button" id="reset" value="Clear JSON" onclick="clearPage();" />
+         </div>
+         <div class="clear">
+         </div>
+         <hr />
+         <a name="_output" class="noa"></a>
+         <div id="stats" class="stats"></div>
+         <div id="output" class="output"></div>
+      </form>
+   </div>
+</body>
+</html>
